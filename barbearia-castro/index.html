@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Barbearia Castro — Tradição & Estilo · Itabira/MG</title>
+<meta name="description" content="Barbearia Castro — corte, barba e cuidado masculino no centro de Itabira. Agende pelo WhatsApp." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#14110F;
+    --bg-2:#1D1916;
+    --panel:#221D19;
+    --cream:#EFE7DA;
+    --muted:#A9988A;
+    --gold:#C8A24B;
+    --gold-2:#E0BE6A;
+    --rust:#A6502B;
+    --line:rgba(239,231,218,.10);
+    --shadow:0 22px 60px -26px rgba(0,0,0,.8);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Oswald',sans-serif;color:var(--cream);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:300}
+  h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.96;letter-spacing:1px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.74rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  a{color:inherit;text-decoration:none}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(20,17,15,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:40px;height:40px;border:2px solid var(--gold);border-radius:8px;display:grid;place-items:center;color:var(--gold);font-family:'Bebas Neue';font-size:1.5rem;transform:rotate(0)}
+  .brand b{font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:1.5px;color:var(--cream)}
+  .brand small{display:block;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);margin-top:-3px}
+  nav ul{display:flex;gap:30px;list-style:none;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase}
+  nav ul a{color:var(--muted);transition:color .2s}
+  nav ul a:hover{color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#1a1512;padding:13px 24px;border-radius:6px;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:transform .18s,background .2s}
+  .btn:hover{transform:translateY(-2px);background:var(--gold-2)}
+  .btn.ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent}
+  .nav .btn{padding:11px 20px}
+  .menu-btn{display:none;background:none;border:0;font-size:1.7rem;color:var(--gold);cursor:pointer}
+
+  .hero{position:relative;overflow:hidden;background:radial-gradient(70% 90% at 80% 0%,rgba(166,80,43,.22),transparent),radial-gradient(50% 60% at 0% 100%,rgba(200,162,75,.10),transparent),var(--bg)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;padding:74px 22px 84px}
+  .hero h1{font-size:clamp(3.2rem,9vw,6rem);margin:16px 0}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{font-size:1.1rem;color:var(--muted);max-width:34ch;margin-bottom:30px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .trust{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
+  .trust b{font-family:'Bebas Neue';font-size:2.2rem;color:var(--gold);line-height:1;display:block}
+  .trust span{font-size:.72rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .hero-art{position:relative;aspect-ratio:4/5;border-radius:14px;background:linear-gradient(160deg,var(--panel),#100d0b);box-shadow:var(--shadow);overflow:hidden;display:grid;place-items:center;border:1px solid var(--line)}
+  .hero-art::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(200,162,75,.04) 0 12px,transparent 12px 26px)}
+  .hero-art .ph{position:relative;text-align:center;color:var(--gold);opacity:.7}
+  .hero-art .ph svg{width:60px;height:60px;margin-bottom:10px}
+  .hero-art .ph span{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;display:block}
+  .pole{position:absolute;top:0;bottom:0;left:0;width:10px;background:repeating-linear-gradient(180deg,var(--rust) 0 14px,var(--cream) 14px 28px,#2a5c8a 28px 42px)}
+
+  section{padding:84px 0}
+  .sec-head{text-align:center;max-width:52ch;margin:0 auto 50px}
+  .sec-head h2{font-size:clamp(2.4rem,5vw,3.6rem);margin:10px 0}
+  .sec-head p{color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-5px);border-color:var(--gold)}
+  .card .ic{width:48px;height:48px;border-radius:10px;background:#100d0b;display:grid;place-items:center;color:var(--gold);margin-bottom:18px}
+  .card .ic svg{width:26px;height:26px}
+  .card h3{font-size:1.7rem;margin-bottom:8px;letter-spacing:1px}
+  .card p{font-size:.92rem;color:var(--muted);margin-bottom:18px;font-weight:300}
+  .price{font-family:'Bebas Neue';font-size:1.9rem;color:var(--gold);letter-spacing:1px}
+  .price small{font-size:.72rem;color:var(--muted);font-family:'Oswald';letter-spacing:0}
+
+  .about{background:var(--bg-2)}
+  .about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+  .about-art{aspect-ratio:1/1;border-radius:14px;background:linear-gradient(150deg,#2a2320,#100d0b);box-shadow:var(--shadow);display:grid;place-items:center;color:var(--gold);border:1px solid var(--line);opacity:.95}
+  .about-art .ph{text-align:center;opacity:.7}
+  .about-art .ph svg{width:54px;height:54px}
+  .about h2{font-size:clamp(2.4rem,5vw,3.6rem);margin:10px 0 18px}
+  .about p{color:var(--muted);margin-bottom:16px;font-weight:300}
+  .ticks{list-style:none;display:grid;gap:12px;margin-top:8px}
+  .ticks li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem}
+  .ticks .t{flex:none;width:24px;height:24px;border-radius:5px;background:var(--gold);color:#1a1512;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .quote{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px}
+  .quote .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+  .quote p{font-size:1.05rem;color:var(--cream);margin-bottom:18px;font-weight:300}
+  .quote .who{display:flex;align-items:center;gap:12px}
+  .quote .av{width:42px;height:42px;border-radius:8px;background:var(--gold);color:#1a1512;display:grid;place-items:center;font-weight:700;font-family:'Bebas Neue';font-size:1.3rem}
+  .quote .who b{display:block;font-size:.95rem;letter-spacing:.04em}
+  .quote .who small{color:var(--muted);font-size:.78rem}
+
+  .cta{background:linear-gradient(135deg,#241a14,#120e0c);border:1px solid var(--line);border-radius:16px;padding:64px 40px;text-align:center;position:relative;overflow:hidden;margin:0 22px}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 85% 0%,rgba(166,80,43,.3),transparent)}
+  .cta-inner{position:relative;max-width:48ch;margin:0 auto}
+  .cta h2{font-size:clamp(2.4rem,5.4vw,3.8rem);margin-bottom:14px}
+  .cta p{color:var(--muted);margin-bottom:28px;font-weight:300}
+  .info{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:34px;font-size:.9rem;color:var(--muted)}
+  .info div{display:flex;align-items:center;gap:8px}
+  .info svg{width:18px;height:18px}
+
+  footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.84rem}
+  footer .brand{justify-content:center;margin-bottom:14px}
+
+  .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);transition:transform .2s}
+  .wa:hover{transform:scale(1.07)}
+  .wa svg{width:32px;height:32px;fill:#fff}
+
+  @media(max-width:880px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:48px}
+    .hero-art{max-width:360px;margin:0 auto;width:100%}
+    .grid,.quotes{grid-template-columns:1fr}
+    .about .wrap{grid-template-columns:1fr;gap:28px}
+    nav ul{display:none}.nav .btn{display:none}.menu-btn{display:block}
+    section{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <span class="mark">C</span>
+      <span><b>Barbearia Castro</b><small>Tradição & Estilo</small></span>
+    </a>
+    <nav><ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">A Casa</a></li>
+      <li><a href="#depoimentos">Clientes</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul></nav>
+    <a class="btn" href="https://wa.me/5531999999999?text=Fala!%20Quero%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Castro" target="_blank" rel="noopener">Agendar</a>
+    <button class="menu-btn" aria-label="menu">☰</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Itabira · Minas Gerais</span>
+      <h1>Corte na régua.<br><span>Barba no capricho.</span></h1>
+      <p class="lead">Mais que um corte — um ritual. Tradição barbeira com o estilo que você merece, no centro de Itabira.</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://wa.me/5531999999999?text=Fala!%20Quero%20marcar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <a class="btn ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="trust">
+        <div><b>+12 mil</b><span>cortes feitos</span></div>
+        <div><b>4,9★</b><span>no Google</span></div>
+        <div><b>10 anos</b><span>de casa</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <span class="pole"></span>
+      <div class="ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8.5L20 20M8.5 15.5L20 4"/></svg>
+        <span>foto da barbearia aqui</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços</h2>
+      <p>Trabalho bem feito, hora marcada e aquele café por conta da casa.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8.5L20 20M8.5 15.5L20 4"/></svg></div>
+        <h3>Corte masculino</h3>
+        <p>Tesoura, máquina e acabamento na navalha. Do clássico ao moderno.</p>
+        <div class="price">R$ 40 <small>/ corte</small></div>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8c2 4 5 6 8 6s6-2 8-6"/><path d="M7 14c0 3 2 5 5 5s5-2 5-5"/></svg></div>
+        <h3>Barba completa</h3>
+        <p>Toalha quente, navalha e óleo. A barba alinhada do jeito certo.</p>
+        <div class="price">R$ 35 <small>/ sessão</small></div>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5"/><circle cx="12" cy="14" r="3"/></svg></div>
+        <h3>Corte + Barba</h3>
+        <p>O combo completo pra sair daqui novo em folha. Economiza e fica impecável.</p>
+        <div class="price">R$ 65 <small>/ combo</small></div>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <h3>Corte infantil</h3>
+        <p>Paciência e jeito com a criançada. O primeiro corte vira foto na parede.</p>
+        <div class="price">R$ 35 <small>/ corte</small></div>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>Sobrancelha & pezinho</h3>
+        <p>Aquele acabamento que faz diferença. Rápido, na navalha, bem feito.</p>
+        <div class="price">R$ 20 <small>/ cada</small></div>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></div>
+        <h3>Plano mensal</h3>
+        <p>Cortes ilimitados no mês por um valor fixo. Pra quem gosta de andar sempre na régua.</p>
+        <div class="price">R$ 120 <small>/ mês</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">A Casa</span>
+      <h2>Dez anos cortando a régua de Itabira</h2>
+      <p>A Barbearia Castro nasceu pra ser o ponto de encontro do homem que se cuida. Cadeira boa, conversa boa e o corte saindo perfeito — sempre.</p>
+      <ul class="ticks">
+        <li><span class="t">✓</span><span>Hora marcada de verdade — você não fica esperando.</span></li>
+        <li><span class="t">✓</span><span>Barbeiros experientes e material esterilizado.</span></li>
+        <li><span class="t">✓</span><span>Café, Wi-Fi e aquele papo enquanto espera.</span></li>
+        <li><span class="t">✓</span><span>No centro, com fácil acesso e estacionamento por perto.</span></li>
+      </ul>
+    </div>
+    <div class="about-art">
+      <div class="ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg>
+        <span class="eyebrow" style="display:block;margin-top:10px">foto da equipe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Quem senta na cadeira volta</span>
+      <h2>O que os clientes falam</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"Melhor corte de Itabira, disparado. Marco no WhatsApp e tá sempre no horário."</p>
+        <div class="who"><span class="av">R</span><div><b>Rodrigo M.</b><small>Itabira</small></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"A barba na navalha com toalha quente é outro nível. Virei cliente de plano mensal."</p>
+        <div class="who"><span class="av">T</span><div><b>Thiago A.</b><small>Itabira</small></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>"Levo meu filho desde pequeno. Atendimento de primeira, ambiente top."</p>
+        <div class="who"><span class="av">J</span><div><b>Juliano P.</b><small>Itabira</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:20px">
+  <div class="cta">
+    <div class="cta-inner">
+      <span class="eyebrow">Bora ficar na régua?</span>
+      <h2>Marque seu horário</h2>
+      <p>Manda mensagem que a gente já encaixa você. Rápido e sem complicação.</p>
+      <a class="btn" href="https://wa.me/5531999999999?text=Fala!%20Quero%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Castro" target="_blank" rel="noopener" style="font-size:.95rem;padding:16px 32px">Chamar no WhatsApp</a>
+      <div class="info">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Rua Exemplo, 456 — Centro, Itabira</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Ter a Sáb · 9h às 20h</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">C</span>
+      <span><b>Barbearia Castro</b><small>Itabira/MG</small></span>
+    </div>
+    <p>© 2026 Barbearia Castro. Todos os direitos reservados.</p>
+    <p style="margin-top:6px;opacity:.6;font-size:.78rem">Site demonstrativo — fictício, criado como exemplo.</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5531999999999?text=Fala!%20Quero%20marcar%20um%20hor%C3%A1rio" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click',()=>{
+    const ul=document.querySelector('nav ul');
+    const open=ul.style.display==='flex';
+    ul.style.display=open?'':'flex';
+    if(!open){ul.style.position='absolute';ul.style.top='74px';ul.style.left='0';ul.style.right='0';ul.style.flexDirection='column';ul.style.background='var(--bg-2)';ul.style.padding='20px 22px';ul.style.borderBottom='1px solid var(--line)';ul.style.gap='16px';}
+  });
+</script>
+</body>
+</html>
