@@ -3,58 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sites para o seu negócio · Itabira/MG</title>
-<meta name="description" content="Sites simples, bonitos e responsivos para comércios de Itabira. Veja exemplos." />
+<title>Sites para salões de beleza · Itabira/MG</title>
+<meta name="description" content="Sites simples, bonitos e responsivos para salões de beleza de Itabira. Veja exemplos ao vivo." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
-  :root{--bg:#16130F;--panel:#211C17;--cream:#EFE7DA;--muted:#A99A8A;--gold:#C8A24B;--line:rgba(239,231,218,.12)}
+  :root{--bg:#1A1216;--panel:#241920;--cream:#F3E9E6;--muted:#B49AA3;--rose:#C2727F;--gold:#C9A66B;--line:rgba(243,233,230,.12)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.05}
-  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.08}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
   a{color:inherit;text-decoration:none}
-  .eyebrow{font-size:.74rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500}
-  header{text-align:center;padding:90px 22px 50px;background:radial-gradient(60% 80% at 50% 0%,rgba(200,162,75,.14),transparent)}
+  .eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  header{text-align:center;padding:88px 22px 46px;background:radial-gradient(60% 80% at 50% 0%,rgba(194,114,127,.18),transparent)}
   header h1{font-size:clamp(2.6rem,7vw,4.4rem);margin:16px 0 14px}
-  header p{color:var(--muted);max-width:50ch;margin:0 auto;font-size:1.1rem}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:30px 0 70px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,border-color .2s;display:block}
-  .card:hover{transform:translateY(-6px);border-color:var(--gold)}
-  .thumb{aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden}
+  header h1 em{font-style:italic;color:var(--rose)}
+  header p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:1.1rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:34px 0 70px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,border-color .2s;display:block}
+  .card:hover{transform:translateY(-6px);border-color:var(--rose)}
+  .thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative;text-align:center;padding:0 18px}
+  .thumb.camelia{background:linear-gradient(150deg,#C2727F,#A4515F)}
+  .thumb.lumiere{background:linear-gradient(150deg,#26222a,#100f11)}
   .thumb.aurora{background:linear-gradient(150deg,#5A2A3A,#3F1C29)}
-  .thumb.castro{background:linear-gradient(150deg,#2a2320,#100d0b)}
-  .thumb .tag{position:absolute;top:14px;left:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:30px;padding:5px 12px}
-  .thumb h3{font-size:2rem;color:var(--cream);text-align:center;padding:0 20px}
-  .card .body{padding:22px 24px}
-  .card .body p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
-  .open{color:var(--gold);font-size:.9rem;font-weight:500;letter-spacing:.04em}
-  footer{text-align:center;padding:50px 22px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .thumb .tag{position:absolute;top:14px;left:14px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:30px;padding:5px 11px}
+  .thumb.lumiere .tag{color:var(--gold);border-color:var(--gold)}
+  .thumb h3{font-size:1.7rem;color:#fff}
+  .body{padding:20px 22px}
+  .body p{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+  .open{color:var(--gold);font-size:.88rem;font-weight:500}
+  footer{text-align:center;padding:48px 22px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+  @media(max-width:780px){.grid{grid-template-columns:1fr;max-width:380px;margin:0 auto}}
 </style>
 </head>
 <body>
   <header>
     <span class="eyebrow">Itabira · Minas Gerais</span>
-    <h1>Sites para o seu negócio</h1>
-    <p>Sites simples, bonitos e que abrem perfeito no celular — com botão direto pro seu WhatsApp. Veja dois exemplos do estilo:</p>
+    <h1>Sites para <em>salões de beleza</em></h1>
+    <p>Sites bonitos, que abrem perfeito no celular e levam a cliente direto pro seu WhatsApp. Veja três estilos diferentes, todos ao vivo:</p>
   </header>
   <div class="wrap">
     <div class="grid">
-      <a class="card" href="studio-aurora/">
-        <div class="thumb aurora"><span class="tag">Estética & Beleza</span><h3>Studio Aurora</h3></div>
-        <div class="body"><p>Salão, estética, sobrancelhas, cílios. Tom elegante e acolhedor.</p><span class="open">Ver site ao vivo →</span></div>
+      <a class="card" href="espaco-camelia/">
+        <div class="thumb camelia"><span class="tag">Moderno & suave</span><h3>Espaço Camélia</h3></div>
+        <div class="body"><p>Tons de rosé, leve e acolhedor. Cabelo, unhas e make.</p><span class="open">Ver ao vivo →</span></div>
       </a>
-      <a class="card" href="barbearia-castro/">
-        <div class="thumb castro"><span class="tag">Barbearia</span><h3>Barbearia Castro</h3></div>
-        <div class="body"><p>Corte, barba, plano mensal. Visual masculino e marcante.</p><span class="open">Ver site ao vivo →</span></div>
+      <a class="card" href="lumiere-studio/">
+        <div class="thumb lumiere"><span class="tag">Sofisticado</span><h3>Lumière Studio</h3></div>
+        <div class="body"><p>Escuro com dourado, ar premium. Para salões de alto padrão.</p><span class="open">Ver ao vivo →</span></div>
+      </a>
+      <a class="card" href="studio-aurora/">
+        <div class="thumb aurora"><span class="tag">Editorial</span><h3>Studio Aurora</h3></div>
+        <div class="body"><p>Creme e vinho, elegante e clássico. Estética e beleza.</p><span class="open">Ver ao vivo →</span></div>
       </a>
     </div>
   </div>
   <footer>
     <p>Exemplos fictícios, criados como demonstração de estilo.</p>
-    <p style="margin-top:8px;opacity:.7">Quer um com a cara do seu negócio? Fale comigo.</p>
+    <p style="margin-top:8px;opacity:.7">Quer um com a cara do seu salão? Fale comigo.</p>
   </footer>
 </body>
 </html>
