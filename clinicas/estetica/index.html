@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clínica Lúmina — Estética & Saúde · Itabira/MG</title>
+<meta name="description" content="Lúmina — clínica de estética e dermatologia em Itabira. Limpeza de pele, harmonização facial, peeling e tratamentos. Agende sua avaliação." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F4F1E9;
+    --bg-2:#E8E6D6;
+    --white:#FFFEFA;
+    --ink:#26302A;
+    --ink-soft:#6B7A6F;
+    --green:#2E7D63;
+    --green-deep:#225E4A;
+    --gold:#BB9D52;
+    --gold-soft:#E6D9B0;
+    --line:rgba(38,48,42,.12);
+    --shadow:0 24px 58px -30px rgba(34,94,74,.42);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Marcellus',serif;font-weight:400;line-height:1.16}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--green);color:#fff;padding:14px 30px;border-radius:6px;font-size:.86rem;font-weight:500;letter-spacing:.04em;transition:transform .18s,box-shadow .2s,background .2s;box-shadow:0 12px 26px -12px rgba(34,94,74,.7)}
+  .btn:hover{transform:translateY(-2px);background:var(--green-deep)}
+  .btn.gold{background:linear-gradient(120deg,var(--gold),#9d8442);color:#23291a}
+  .btn.ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+  .btn.ghost:hover{background:var(--green);color:#fff}
+  .gline{width:50px;height:1px;background:var(--gold);margin:0 auto}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,241,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mk{width:42px;height:42px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:var(--gold-soft)}
+  .brand .mk svg{width:22px;height:22px}
+  .brand b{font-family:'Marcellus';font-size:1.35rem;letter-spacing:1px;display:block;line-height:1}
+  .brand small{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft)}
+  nav ul{display:flex;gap:30px;list-style:none;font-size:.86rem}
+  nav ul a{color:var(--ink-soft);transition:color .2s}
+  nav ul a:hover{color:var(--green)}
+  .nav .btn{padding:11px 22px}
+  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--green);cursor:pointer}
+
+  .hero{position:relative;overflow:hidden;background:radial-gradient(55% 75% at 88% 6%,var(--bg-2),transparent)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:74px 22px 86px}
+  .hero h1{font-size:clamp(2.6rem,5.8vw,4.4rem);margin:18px 0}
+  .hero h1 em{font-style:italic;color:var(--green)}
+  .hero p.lead{font-size:1.12rem;color:var(--ink-soft);max-width:33ch;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .trust{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+  .trust b{font-family:'Marcellus';font-size:1.9rem;color:var(--green);line-height:1;display:block}
+  .trust span{font-size:.72rem;letter-spacing:.05em;color:var(--ink-soft);text-transform:uppercase}
+  .hero-art{position:relative;aspect-ratio:4/5;border-radius:160px 160px 18px 18px;background:linear-gradient(160deg,var(--green),var(--green-deep));box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden}
+  .hero-art::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 45% at 75% 18%,rgba(230,217,176,.3),transparent)}
+  .hero-art .ph{position:relative;text-align:center;color:var(--gold-soft);opacity:.9}
+  .hero-art .ph svg{width:52px;height:52px;margin-bottom:8px}
+  .hero-art .ph span{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+  .badge-float{position:absolute;left:-12px;bottom:34px;background:var(--white);border-radius:16px;padding:13px 17px;box-shadow:var(--shadow);display:flex;align-items:center;gap:11px;border:1px solid var(--line)}
+  .badge-float .stars{color:var(--gold);font-size:.95rem;letter-spacing:2px}
+  .badge-float b{font-family:'Marcellus';font-size:1.05rem}
+  .badge-float small{display:block;font-size:.7rem;color:var(--ink-soft)}
+
+  section{padding:82px 0}
+  .sec-head{text-align:center;max-width:54ch;margin:0 auto 50px}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin:12px 0}
+  .sec-head p{color:var(--ink-soft)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:32px 26px;transition:transform .2s,box-shadow .25s}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card .ic{width:50px;height:50px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;color:var(--green);margin-bottom:18px}
+  .card .ic svg{width:25px;height:25px}
+  .card h3{font-size:1.4rem;margin-bottom:8px}
+  .card p{font-size:.92rem;color:var(--ink-soft)}
+
+  .about{background:var(--white)}
+  .about .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
+  .about-art{aspect-ratio:1/1;border-radius:24px;background:linear-gradient(150deg,var(--gold-soft),var(--bg));box-shadow:var(--shadow);display:grid;place-items:center;color:var(--green);border:1px solid var(--line)}
+  .about-art .ph{text-align:center;opacity:.8}
+  .about-art .ph svg{width:48px;height:48px}
+  .about h2{font-size:clamp(2rem,4.4vw,2.9rem);margin:12px 0 18px}
+  .about p{color:var(--ink-soft);margin-bottom:16px}
+  .ticks{list-style:none;display:grid;gap:13px}
+  .ticks li{display:flex;gap:12px;align-items:center;font-size:.96rem}
+  .ticks .t{flex:none;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:.8rem}
+
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .quote{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px}
+  .quote .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+  .quote p{font-family:'Marcellus';font-size:1.18rem;margin-bottom:18px}
+  .quote .who{display:flex;align-items:center;gap:12px}
+  .quote .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--gold));color:#fff;display:grid;place-items:center;font-weight:600}
+  .quote .who b{display:block;font-size:.92rem;font-weight:500}
+  .quote .who small{color:var(--ink-soft);font-size:.78rem}
+
+  .cta{background:linear-gradient(140deg,var(--green),var(--green-deep));color:#fff;border-radius:26px;padding:62px 40px;text-align:center;position:relative;overflow:hidden;margin:0 22px}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 15% 100%,rgba(230,217,176,.16),transparent)}
+  .cta-inner{position:relative;max-width:46ch;margin:0 auto}
+  .cta h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:14px}
+  .cta p{opacity:.92;margin-bottom:28px}
+  .info{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:30px;font-size:.9rem;opacity:.95}
+  .info div{display:flex;align-items:center;gap:8px}
+  .info svg{width:18px;height:18px}
+
+  footer{padding:38px 0;text-align:center;color:var(--ink-soft);font-size:.84rem}
+  footer .brand{justify-content:center;margin-bottom:14px}
+
+  .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);transition:transform .2s}
+  .wa:hover{transform:scale(1.07)}
+  .wa svg{width:32px;height:32px;fill:#fff}
+
+  @media(max-width:820px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:48px}
+    .hero-art{max-width:350px;margin:0 auto;width:100%}
+    .grid,.quotes{grid-template-columns:1fr}
+    .about .wrap{grid-template-columns:1fr;gap:28px}
+    nav ul{display:none}.nav .btn{display:none}.menu-btn{display:block}
+    section{padding:58px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 3 6 6 6 10a6 6 0 01-12 0c0-4 2-7 6-10z"/></svg></span><span><b>Lúmina</b><small>Estética & Saúde</small></span></a>
+    <nav><ul>
+      <li><a href="#servicos">Tratamentos</a></li>
+      <li><a href="#sobre">A Clínica</a></li>
+      <li><a href="#depoimentos">Clientes</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul></nav>
+    <a class="btn" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação</a>
+    <button class="menu-btn" aria-label="menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Itabira · Minas Gerais</span>
+      <h1>Sua beleza <em>natural</em>, com saúde.</h1>
+      <p class="lead">Tratamentos faciais e corporais que realçam o seu melhor, com segurança e profissionais especializados.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <a href="#servicos" style="color:var(--green);font-weight:500;font-size:.92rem">Ver tratamentos →</a>
+      </div>
+      <div class="trust">
+        <div><b>+8 anos</b><span>de experiência</span></div>
+        <div><b>4,9★</b><span>no Google</span></div>
+        <div><b>Itabira</b><span>referência</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c4 3 6 6 6 10a6 6 0 01-12 0c0-4 2-7 6-10z"/><path d="M9 13c1 1.5 5 1.5 6 0"/></svg><span>foto da clínica aqui</span></div>
+      <div class="badge-float"><span class="stars">★★★★★</span><div><b>4,9</b><small>avaliação no Google</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Tratamentos</span><div class="gline"></div><h2>Cuidados pra sua pele e corpo</h2><p>Da limpeza de pele à harmonização, sempre com avaliação individual.</p></div>
+    <div class="grid">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 14c1.5 1.2 4.5 1.2 6 0"/></svg></div><h3>Limpeza de pele</h3><p>Limpeza profunda, extração e hidratação pra uma pele renovada.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5"/><circle cx="12" cy="14" r="3"/></svg></div><h3>Harmonização facial</h3><p>Realce dos seus traços com naturalidade e equilíbrio.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5v14"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Botox & Preenchimento</h3><p>Suavização de linhas e volume com técnica e segurança.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2 5 5 .5-4 3.5 1 5-4-2.5L8 17l1-5-4-3.5 5-.5z"/></svg></div><h3>Peeling & Rejuvenescimento</h3><p>Renovação da pele pra mais viço, firmeza e brilho.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14c3-5 13-5 16 0"/><path d="M7 13v3M12 12v4M17 13v3"/></svg></div><h3>Depilação a laser</h3><p>Resultado duradouro, com conforto e tecnologia.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12c0-4 3-7 7-7s7 3 7 7-3 7-7 7"/><path d="M9 12h6"/></svg></div><h3>Drenagem & Corporal</h3><p>Massagens e protocolos pra modelar e relaxar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">A Clínica</span>
+      <h2>Beleza com responsabilidade</h2>
+      <p>Na Lúmina, cada tratamento começa com uma avaliação cuidadosa. Acreditamos numa beleza que respeita a sua saúde e a sua individualidade.</p>
+      <ul class="ticks">
+        <li><span class="t">✓</span>Profissionais especializados e habilitados</li>
+        <li><span class="t">✓</span>Avaliação individual antes de cada procedimento</li>
+        <li><span class="t">✓</span>Produtos e equipamentos de alta qualidade</li>
+        <li><span class="t">✓</span>Ambiente acolhedor e reservado</li>
+      </ul>
+    </div>
+    <div class="about-art"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span class="eyebrow" style="display:block;margin-top:10px">foto da equipe</span></div></div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Depoimentos</span><div class="gline"></div><h2>Resultados que falam por si</h2></div>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Minha pele nunca esteve tão bonita. Profissionais atenciosas e ambiente lindo."</p><div class="who"><span class="av">A</span><div><b>Amanda R.</b><small>Itabira</small></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Fiz harmonização e o resultado ficou super natural. Amei o cuidado."</p><div class="who"><span class="av">P</span><div><b>Priscila M.</b><small>Itabira</small></div></div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Confiança total. Explicam tudo antes e o resultado supera a expectativa."</p><div class="who"><span class="av">T</span><div><b>Tatiane L.</b><small>Itabira</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:20px">
+  <div class="cta">
+    <div class="cta-inner">
+      <span class="eyebrow" style="color:var(--gold-soft)">Agende sua avaliação</span>
+      <h2>Vamos cuidar de você</h2>
+      <p>Mande uma mensagem e marque sua avaliação sem compromisso. Rapidinho, pelo WhatsApp.</p>
+      <a class="btn gold" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" style="padding:15px 30px">Chamar no WhatsApp</a>
+      <div class="info">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Rua Exemplo, 200 — Centro, Itabira</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Seg a Sáb · 9h às 19h</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="display:inline-flex"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 3 6 6 6 10a6 6 0 01-12 0c0-4 2-7 6-10z"/></svg></span><span style="text-align:left"><b>Lúmina</b><small>Estética & Saúde · Itabira/MG</small></span></div>
+    <p>© 2026 Clínica Lúmina. Todos os direitos reservados.</p>
+    <p style="margin-top:6px;opacity:.7;font-size:.78rem">Site demonstrativo — fictício, criado como exemplo.</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click',()=>{
+    const ul=document.querySelector('nav ul');const open=ul.style.display==='flex';ul.style.display=open?'':'flex';
+    if(!open){ul.style.position='absolute';ul.style.top='76px';ul.style.left='0';ul.style.right='0';ul.style.flexDirection='column';ul.style.background='var(--bg)';ul.style.padding='20px 22px';ul.style.borderBottom='1px solid var(--line)';ul.style.gap='16px';}
+  });
+</script>
+</body>
+</html>

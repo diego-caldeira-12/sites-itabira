@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sites para clínicas e consultórios · Itabira/MG</title>
+<meta name="description" content="Sites profissionais para clínicas e consultórios de Itabira. Veja exemplos ao vivo." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#0F1B2A;--panel:#16263A;--cream:#EAF2F9;--muted:#90A6BC;--blue:#2F8FD0;--line:rgba(234,242,249,.12)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:600}
+  header{text-align:center;padding:88px 22px 46px;background:radial-gradient(60% 80% at 50% 0%,rgba(47,143,208,.18),transparent)}
+  header h1{font-size:clamp(2.4rem,6vw,4rem);margin:16px 0 14px}
+  header p{color:var(--muted);max-width:54ch;margin:0 auto;font-size:1.08rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:34px 0 70px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,border-color .2s;display:block}
+  .card:hover{transform:translateY(-6px);border-color:var(--blue)}
+  .thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative;text-align:center;padding:0 16px}
+  .thumb.odonto{background:linear-gradient(150deg,#16A6C9,#0A4A89)}
+  .thumb.estetica{background:linear-gradient(150deg,#2E7D63,#225E4A)}
+  .thumb.psico{background:linear-gradient(150deg,#9A86C7,#51458A)}
+  .thumb .tag{position:absolute;top:14px;left:14px;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.55);border-radius:30px;padding:5px 11px}
+  .thumb h3{font-size:1.6rem;color:#fff}
+  .body{padding:20px 22px}
+  .body p{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+  .open{color:var(--blue);font-size:.88rem;font-weight:500}
+  footer{text-align:center;padding:48px 22px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+  @media(max-width:780px){.grid{grid-template-columns:1fr;max-width:380px;margin:0 auto}}
+</style>
+</head>
+<body>
+  <header>
+    <span class="eyebrow">Itabira · Minas Gerais</span>
+    <h1>Sites para clínicas e consultórios</h1>
+    <p>Sites que passam credibilidade, aparecem no Google e levam o paciente direto pro seu WhatsApp pra agendar. Três estilos, todos ao vivo:</p>
+  </header>
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="odonto/">
+        <div class="thumb odonto"><span class="tag">Odontologia</span><h3>OdontoVita</h3></div>
+        <div class="body"><p>Azul clínico, moderno e confiável. Pra dentistas e clínicas odontológicas.</p><span class="open">Ver ao vivo →</span></div>
+      </a>
+      <a class="card" href="estetica/">
+        <div class="thumb estetica"><span class="tag">Estética & Saúde</span><h3>Lúmina</h3></div>
+        <div class="body"><p>Verde e dourado, sofisticado. Pra clínicas de estética e dermato.</p><span class="open">Ver ao vivo →</span></div>
+      </a>
+      <a class="card" href="psico/">
+        <div class="thumb psico"><span class="tag">Psicologia</span><h3>Espaço Sereno</h3></div>
+        <div class="body"><p>Lavanda acolhedor. Pra psicólogos, terapeutas e consultórios.</p><span class="open">Ver ao vivo →</span></div>
+      </a>
+    </div>
+  </div>
+  <footer>
+    <p>Exemplos fictícios, criados como demonstração de estilo.</p>
+    <p style="margin-top:8px;opacity:.7">Quer um com a cara da sua clínica? Fale comigo.</p>
+  </footer>
+</body>
+</html>
